@@ -79,13 +79,16 @@ void myNslog(NSString * format,...){
 
 -(void)btnClick:(UIButton *)sender{
     NSLog(@"🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺 btnClick\n");
-    mycustomexit(0);
+//    exit(0);
+    if([self checkIsJailBreak]){
+        [self showAlert];
+    }
 }
 
 -(void) showAlert{
 
     //创建对象
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"显示的标题" message:@"标题的提示信息" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"警告" message:@"你的手机是越狱环境" preferredStyle:UIAlertControllerStyleAlert];
 
     //添加取消类型按钮
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -97,19 +100,15 @@ void myNslog(NSString * format,...){
         NSLog(@"点击确认");
     }]];
 
-    //添加销毁类型按钮
-    [alertController addAction:[UIAlertAction actionWithTitle:@"警告" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"点击警告");
-    }]];
-
-    //添加文本框
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        NSLog(@"添加一个textField就会调用 这个block");
-    }];
-
     //显示
     [self presentViewController:alertController animated:YES completion:nil];
 
+}
+
+-(BOOL) checkIsJailBreak{
+    
+    
+    return YES;
 }
 
 @end
