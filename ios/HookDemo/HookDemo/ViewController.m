@@ -43,7 +43,7 @@ void myNslog(NSString * format,...){
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    [self start_fishhook];
+//    [self start_fishhook];
 }
 
 -(void) initUI{
@@ -79,7 +79,37 @@ void myNslog(NSString * format,...){
 
 -(void)btnClick:(UIButton *)sender{
     NSLog(@"🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺 btnClick\n");
-    exit(0);
+    mycustomexit(0);
+}
+
+-(void) showAlert{
+
+    //创建对象
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"显示的标题" message:@"标题的提示信息" preferredStyle:UIAlertControllerStyleAlert];
+
+    //添加取消类型按钮
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"点击取消");
+    }]];
+
+    //添加常规类型按钮
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"点击确认");
+    }]];
+
+    //添加销毁类型按钮
+    [alertController addAction:[UIAlertAction actionWithTitle:@"警告" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"点击警告");
+    }]];
+
+    //添加文本框
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        NSLog(@"添加一个textField就会调用 这个block");
+    }];
+
+    //显示
+    [self presentViewController:alertController animated:YES completion:nil];
+
 }
 
 @end
