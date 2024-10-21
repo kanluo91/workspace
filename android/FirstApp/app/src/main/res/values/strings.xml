@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="btn1_title">启动Activity</string>
+    <string name="btntitle_withresult">启动Activity并带结果</string>
+    <string name="btntitle_withresult2">启动Activity并带结果(替代方案)</string>
+    <string name="tv_title_activity2">我是个显示文本的</string>
+    <string name="btn_back_title">返回上个页面带结果(替代方案)</string>
+    <string name="tv_callback">返回页面的结果</string>
+    <string name="back_btn_title2">返回页面带结果(原始方案)</string>
+    <string name="btn_back_title3">直接结束页面</string>
+    <string name="btn1_startservice_title">启动服务</string>
+    <string name="btn1_stopservice_title">停止服务</string>
+    <string name="btn1_bindservice_title">绑定服务</string>
+    <string name="btn1_unbindservice_title">解绑服务</string>
+    <string name="btn_title_goto_receiver">跳转广告设置页面</string>
+    <string name="btn_title_sendbroad_1">发送无序广播</string>
+    <string name="btn_title_sendbroad_2">发送有序广播</string>
+</resources>

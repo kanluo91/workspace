@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DBProvider</string>
+    <string name="txt_btn_adddata">添加数据</string>
+</resources>
