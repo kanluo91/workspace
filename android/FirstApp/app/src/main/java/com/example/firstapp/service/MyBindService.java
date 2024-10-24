@@ -25,7 +25,7 @@ public class MyBindService extends Service {
         }
     }
 
-    // 内部类的实例对象
+    // 内部类的实例对象. 通过mybinder 实现 client 和 service 之间的通信
     private MyBinder myBinder = new MyBinder();
 
     @Override

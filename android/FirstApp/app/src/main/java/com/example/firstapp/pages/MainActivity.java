@@ -1,4 +1,4 @@
-package com.example.firstapp;
+package com.example.firstapp.pages;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -11,7 +11,6 @@ import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -25,8 +24,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.firstapp.R;
 import com.example.firstapp.defines.CommonDefines;
-import com.example.firstapp.receiver.MyReceiver01;
 import com.example.firstapp.service.MyBindService;
 import com.example.firstapp.service.MyService01;
 
@@ -58,6 +57,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         configActivityUI();
         configServiceUI();
         configReceiverUI();
+        configSDCardUI();
+    }
+
+    public void configSDCardUI(){
+        Button btn = findViewById(R.id.btn_goto_sdcard_page);
+        btn.setOnClickListener(this);
     }
 
 
@@ -163,6 +168,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(viewId == R.id.btn_goto_receiver){
             Log.i(CommonDefines.receiverTag,"MyReceiverActivity startActivity");
             Intent intent = new Intent(MainActivity.this, MyReceiverActivity.class);
+            startActivity(intent);
+        }else if(viewId == R.id.btn_goto_sdcard_page){
+            Intent intent = new Intent(MainActivity.this,SdCardActivity.class);
             startActivity(intent);
         }
     }

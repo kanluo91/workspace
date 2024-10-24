@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".pages.MainActivity2">
 
     <TextView
         android:id="@+id/tv_show_activity2"

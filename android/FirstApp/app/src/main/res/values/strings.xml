@@ -15,4 +15,7 @@
     <string name="btn_title_goto_receiver">跳转广告设置页面</string>
     <string name="btn_title_sendbroad_1">发送无序广播</string>
     <string name="btn_title_sendbroad_2">发送有序广播</string>
+    <string name="text_btn_gotosdcard">跳转SD卡读读写页面</string>
+    <string name="text_btn_startdownload">开始下载</string>
+    <string name="text_btn_pausedownload">占停下载</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.firstapp;
+package com.example.firstapp.pages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.firstapp.R;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener{
 

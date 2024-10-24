@@ -2,28 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<!--    ContentProvider 使用-->
-<!--    <uses-permission android:name="com.dbprovider.permission"/>-->
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="31">
         <activity
-            android:name=".MyReceiverActivity"
-            android:exported="true" />
-        <!-- Service -->
+            android:name=".pages.SdCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.MyReceiverActivity"
+            android:exported="true" /> <!-- Service -->
         <service
             android:name=".service.MyService01"
             android:exported="true" />
-        <service android:name=".service.MyBindService" />
-        <!-- Receiver -->
+        <service android:name=".service.MyBindService" /> <!-- Receiver -->
         <receiver
             android:name=".receiver.MyReceiver01"
             android:exported="true"
@@ -58,13 +57,12 @@
             <intent-filter android:priority="100">
                 <action android:name="MyOrderFilterRules" />
             </intent-filter>
-        </receiver>
-        <!-- Activity -->
+        </receiver> <!-- Activity -->
         <activity
-            android:name=".MainActivity2"
+            android:name=".pages.MainActivity2"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".pages.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

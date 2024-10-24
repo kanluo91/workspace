@@ -1,11 +1,7 @@
-package com.example.firstapp;
+package com.example.firstapp.pages;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.example.firstapp.R;
 import com.example.firstapp.defines.CommonDefines;
 import com.example.firstapp.receiver.MyOrderReceiver01;
 import com.example.firstapp.receiver.MyOrderReceiver02;
